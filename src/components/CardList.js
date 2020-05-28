@@ -4,6 +4,7 @@ import Card from './Card';
 const CardList = ({robots}) => {
     // This loops through the array of robots
     const cardComponent = robots.map((user, i) => {
+        
         return (
             <Card 
                 key = {i} 
