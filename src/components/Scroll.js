@@ -1,5 +1,4 @@
 import React from 'react';
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 // using children allows this component to wrap around other components 
 const Scroll = (props) => {

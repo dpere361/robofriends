@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundary';
+import {robots} from '../robots'; //only needed because the API is not working
 import './App.css';
 
 
@@ -12,16 +13,17 @@ class App extends Component {
         super();
 
         this.state = {
-            robots: [],
+            robots: robots, //would be empty if the API worked
             searchfield: ''
         };
     }
 
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response=> response.json())
-            .then(users =>  this.setState({robots: users}))
-    }
+    //Doesn't work with GH Pages for whatever reason
+    // componentDidMount() {
+    //     fetch('https://jsonplaceholder.typicode.com/users')
+    //         .then(response=> response.json())
+    //         .then(users =>  this.setState({robots: users}))
+    // }
 
     onSearchChange = (event) => {
         this.setState({searchfield: event.target.value})
