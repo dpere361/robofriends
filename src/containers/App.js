@@ -47,7 +47,6 @@ class App extends Component {
                             <CardList robots = {filteredRobots}/>
                         </ErrorBoundry>
                     </Scroll>
-                    <CardList robots = {filteredRobots}/>
                 </div>
             );
     }
